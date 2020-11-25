@@ -7,4 +7,4 @@ This is an adaption of some sample code from here https://github.com/CodeMazeBlo
 ## What the application does
 The application is a simple file upload one where you select a file and then upload its contents. 
 
-["web application interface"](https://github.com/jometzg/webappcontainersstorage/blob/master/web-page.png)
+!["web application interface"](web-page.png)
