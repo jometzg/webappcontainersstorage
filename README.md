@@ -33,7 +33,10 @@ Note that the name used is just *filepath* - this is because the web app runtime
 So what you can do is change the application setting *filepath* to point to a different Azure file share and then the uploads will land there:
 
 ## Web app path mappings
-!["app file path settings"](app settings mounts.png)
+!["app file path settings"](app-settings-mounts.png)
 
-In order for the application to use Azure files for storage, Azure storage file shares need to be created and mounted as paths into the container.
+In order for the application to use Azure files for storage, Azure storage file shares need to be created and mounted as paths into the container. One of these paths must be the one used in the application settings. If there is none defined in the application settings, then the default path from the Dockerfile is used. In this case the default values is */uploads*.
+
+## Summary
+This small demo illustrates that you can use Azure storage file shares for persistent storage for web app for containers and that your can also use application settings in the web app to drive into the container values at runtime, which can also be used for other secrets like database connection strings. Once this mechanism is in place, key vault references may be used in applications settings to further enhance the security. You can find the discussion on how to do this here https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references
 
